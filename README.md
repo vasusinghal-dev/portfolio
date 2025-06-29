@@ -2,7 +2,19 @@
 
 This portfolio is a reflection of my growth as a frontend developer, built while learning from **JavaScript Mastery** resources. It showcases my work with modern frontend technologies like **React**, **Three.js**, **Tailwind CSS**, and more.
 
-![Preview Screenshot](link-to-screenshot-or-gif)
+## 📸 Screenshots
+
+### 🚀 Hero Section
+
+![Hero Screenshot](./public/screenshots/hero.png)
+
+### 🧰 Projects Section
+
+![Projects Screenshot](./public/screenshots/projects.png)
+
+### 📬 Contact Section
+
+![Contact Screenshot](./public/screenshots/contact.png)
 
 ---
 
