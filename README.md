@@ -1,12 +1,71 @@
-# React + Vite
+# 💼 Vasu Singhal - Frontend Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This portfolio is a reflection of my growth as a frontend developer, built while learning from **JavaScript Mastery** resources. It showcases my work with modern frontend technologies like **React**, **Three.js**, **Tailwind CSS**, and more.
 
-Currently, two official plugins are available:
+![Preview Screenshot](link-to-screenshot-or-gif)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Responsive and animated landing page using **Framer Motion**
+- 3D computer model using **Three.js** with `@react-three/fiber`
+- Skill section with floating icons rendered on interactive canvas
+- Project cards with GitHub links and stack tags
+- Fully functional contact form using **EmailJS**
+
+---
+
+## 🧑‍💻 Tech Stack
+
+| Category            | Tools & Libraries                       |
+| ------------------- | --------------------------------------- |
+| **Languages**       | JavaScript, TypeScript, HTML5, CSS3     |
+| **Frontend**        | React.js, Tailwind CSS, Redux Toolkit   |
+| **Animations**      | Framer Motion, @react-three/fiber, Drei |
+| **Backend (basic)** | Node.js, MongoDB (learning)             |
+| **Utilities**       | Git, GitHub, Vite, EmailJS              |
+| **Design**          | Figma, UI/UX Principles                 |
+
+---
+
+## 🧭 Sections Breakdown
+
+### 🧍‍♂️ Hero
+
+> Animated intro with a 3D canvas model, powered by Three.js and fiber.
+
+### 👨‍🔧 About
+
+Overview of who I am and what I do: frontend dev, UI/UX learner, backend explorer.
+
+### 🚀 Tech Stack
+
+Interactive spheres for each technology I use or am currently learning.
+
+### 🧰 Experience
+
+Timeline section showing my journey — currently working on freelance and personal projects.
+
+### 📁 Projects
+
+Each card includes:
+
+- Live project screenshot
+- Description and tech tags
+- GitHub source code link
+
+### 📬 Contact
+
+A live contact form using **EmailJS** — works instantly and emails are delivered straight to my inbox.
+
+---
+
+## 📦 Getting Started
+
+```bash
+git clone git@github.com:vasusinghal-dev/portfolio.git
+cd portfolio
+npm install
+npm run dev
+```
