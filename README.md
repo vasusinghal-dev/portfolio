@@ -1,16 +1,61 @@
-# React + Vite
+# 🌐 Personal Portfolio – Vasu
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal developer portfolio built using **React, Tailwind CSS, GSAP, and EmailJS** to showcase my projects, skills, and journey as a frontend developer.
 
-Currently, two official plugins are available:
+🚀 Live Website: https://yourdomain.com  
+📂 GitHub Repo: https://github.com/vasusinghal-dev/portfolio
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ⚡ Smooth animations with **GSAP**
+- 🎨 Clean, modern UI with **Tailwind CSS**
+- 🌙 Dark mode support
+- 📱 Fully responsive design
+- 📩 Working contact form using **EmailJS**
+- 🧩 Modular, clean React component structure
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+
+- **Frontend:** React, Tailwind CSS
+- **Animations:** GSAP
+- **Forms & Email:** EmailJS
+- **Icons:** React Icons
+- **Deployment:** Vercel (or Netlify)
+
+---
+
+## 📸 Preview
+
+![Portfolio Preview](./public/projects/portfolio.png)
+
+---
+
+## 📬 Contact
+
+If you'd like to collaborate or hire me:
+
+- Email: **[contact@vasusinghal.com](mailto:contact@yourdomain.com)**
+- LinkedIn: [https://linkedin.com/in/vasusinghal-dev](https://linkedin.com/in/vasusinghal-dev)
+- GitHub: [https://github.com/vasusinghal-dev](https://github.com/vasusinghal-dev)
+
+---
+
+## 🧠 What I’m Currently Learning
+
+- Backend fundamentals with Node.js
+- API integration & real-world projects
+- Improving UI responsiveness & design consistency
+
+---
+
+## 📜 License
+
+This project is open-source and available under the MIT License.
+
+---
+
+> Built with ❤️ by Vasu
