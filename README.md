@@ -2,7 +2,7 @@
 
 My personal developer portfolio built using **React, Tailwind CSS, GSAP, and EmailJS** to showcase my projects, skills, and journey as a frontend developer.
 
-🚀 Live Website: https://yourdomain.com  
+🚀 Live Website: https://vasusinghal.com  
 📂 GitHub Repo: https://github.com/vasusinghal-dev/portfolio
 
 ---
