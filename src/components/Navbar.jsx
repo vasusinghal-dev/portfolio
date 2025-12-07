@@ -7,7 +7,7 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { navItems } from "../data/navItems.js";
-import useNavbarLogic from "../hooks/useNavBarLogic.js";
+import useNavbarLogic from "../hooks/useNavbarLogic.js";
 
 const Navbar = ({ activeSection }) => {
   const { dark, isOpen, scrolled, toggleTheme, toggleMenu, closeMenu } =
