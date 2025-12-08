@@ -81,7 +81,7 @@ const About = () => {
               <div className="p-6 card card-hover">
                 <div className="flex flex-col gap-3 md:flex-row justify-between mb-2">
                   <h4 className="font-bold text-lg">{education.degree}</h4>
-                  <span className="w-[98px] text-sm text-primary font-medium px-3 py-1 bg-primary/10 rounded-lg md:rounded-full ">
+                  <span className="max-w-[100px] text-sm text-primary font-medium px-3 py-1 bg-primary/10 rounded-lg md:rounded-full ">
                     {education.year}
                   </span>
                 </div>

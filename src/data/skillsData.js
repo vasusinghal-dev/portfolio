@@ -12,6 +12,7 @@ import {
   SiNextdotjs,
   SiVite,
   SiEslint,
+  SiGreensock,
 } from "react-icons/si";
 import { DiVisualstudio } from "react-icons/di";
 import { TbDeviceDesktop } from "react-icons/tb";
@@ -22,17 +23,18 @@ export const skills = [
   { name: "HTML5", icon: SiHtml5, color: "text-[#E34F26]" },
   { name: "CSS3", icon: SiCss3, color: "text-[#1572B6]" },
   { name: "JavaScript", icon: SiJavascript, color: "text-[#F7DF1E]" },
-  { name: "TypeScript", icon: SiTypescript, color: "text-[#3178C6]" },
+  // { name: "TypeScript", icon: SiTypescript, color: "text-[#3178C6]" },
   { name: "React", icon: SiReact, color: "text-[#61DAFB]" },
-  { name: "Next.js", icon: SiNextdotjs, color: "text-white dark:text-black" },
+  // { name: "Next.js", icon: SiNextdotjs, color: "text-white dark:text-black" },
   { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-[#06B6D4]" },
   { name: "Redux", icon: SiRedux, color: "text-[#764ABC]" },
-  { name: "Node.js", icon: SiNodedotjs, color: "text-[#339933]" },
+  { name: "GSAP", icon: SiGreensock, color: "text-[#88CE02]" },
+  // { name: "Node.js", icon: SiNodedotjs, color: "text-[#339933]" },
   { name: "Git", icon: SiGit, color: "text-[#F05032]" },
   { name: "GitHub", icon: VscGithubInverted, color: "text-current" },
   { name: "Vite", icon: SiVite, color: "text-[#646CFF]" },
-  { name: "ESLint", icon: SiEslint, color: "text-[#4B32C3]" },
-  { name: "Figma", icon: SiFigma, color: "text-[#F24E1E]" },
+  // { name: "ESLint", icon: SiEslint, color: "text-[#4B32C3]" },
+  // { name: "Figma", icon: SiFigma, color: "text-[#F24E1E]" },
   { name: "VS Code", icon: DiVisualstudio, color: "text-[#007ACC]" },
 ];
 

@@ -10,7 +10,7 @@ import LoadingScreen from "./components/LoadingScreen.jsx";
 import useActiveSection from "./hooks/useActiveSection.js";
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const activeSection = useActiveSection();
 
   useEffect(() => {

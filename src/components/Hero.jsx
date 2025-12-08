@@ -66,11 +66,11 @@ const Hero = () => {
         </div>
 
         {/* Quick Stats */}
-        <div className="hero-stats grid grid-cols-3 gap-4 max-w-lg mx-auto mb-8">
+        <div className="hero-stats grid grid-cols-3 gap-2 sm:gap-4 max-w-lg mx-auto mb-8 justify-items-center">
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="text-center p-4 card card-hover min-w-28"
+              className="text-center p-4 card card-hover w-[104px] sm:w-auto"
             >
               <div className="text-2xl font-bold text-primary">
                 {stat.value}

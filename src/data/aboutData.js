@@ -4,7 +4,7 @@ export const education = {
   degree: "Bachelor of Computer Applications (BCA)",
   school: "Asian School of Business",
   year: "2021 - 2025",
-  gpa: "3.8/4.0",
+  gpa: "7.8 / 10",
   highlights: [
     "Dean's List",
     "Web Development Club President",
