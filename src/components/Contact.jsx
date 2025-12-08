@@ -1,11 +1,7 @@
-import {
-  FaCheck,
-  FaEnvelope,
-  FaMapMarkerAlt,
-  FaPaperPlane,
-  FaPhone,
-} from "react-icons/fa";
+import { FaCheck, FaPaperPlane } from "react-icons/fa";
 import useContact from "../hooks/useContact.js";
+import { contactInfo } from "../data/contactData.js";
+// import { contactInfo } from "react-icons/gr";
 
 const Contact = () => {
   const {
@@ -16,27 +12,6 @@ const Contact = () => {
     handleSubmit,
     error,
   } = useContact();
-
-  const contactInfo = [
-    {
-      icon: FaEnvelope,
-      title: "Email",
-      value: "vasu.singhal.work@gmail.com",
-      link: "https://mail.google.com/mail/?view=cm&to=vasu.singhal.work@gmail.com&su=Opportunity%20from%20Your%20Portfolio",
-    },
-    {
-      icon: FaPhone,
-      title: "Phone",
-      value: "Available on Request",
-      link: "https://mail.google.com/mail/?view=cm&to=vasu.singhal.work@gmail.com&su=Request%20for%20phone%20call",
-    },
-    {
-      icon: FaMapMarkerAlt,
-      title: "Location",
-      value: "Available for Remote Work",
-      link: "#",
-    },
-  ];
 
   return (
     <section className="section-padding">
