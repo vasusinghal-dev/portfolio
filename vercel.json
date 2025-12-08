@@ -7,6 +7,10 @@
     {
       "source": "/trailerflix/(.*)",
       "destination": "https://trailerflix-ashen.vercel.app/$1"
+    },
+    {
+      "source": "/assets/(.*)",
+      "destination": "https://trailerflix-ashen.vercel.app/assets/$1"
     }
   ]
 }
