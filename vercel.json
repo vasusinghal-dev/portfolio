@@ -1,8 +1,12 @@
 {
   "rewrites": [
     {
+      "source": "/trailerflix",
+      "destination": "https://trailerflix-ashen.vercel.app"
+    },
+    {
       "source": "/trailerflix/(.*)",
-      "destination": "https://trailerflix-ashen.vercel.app/browse"
+      "destination": "https://trailerflix-ashen.vercel.app/$1"
     }
   ]
 }
