@@ -169,4 +169,5 @@ Portfolio content is centralized in `src/data/portfolio.json` for easy managemen
 
 ## License
 
-This project is personal and proprietary. Contact for inquiries.
+This project is licensed under the MIT License.  
+Portfolio content and personal information remain the author’s own.
