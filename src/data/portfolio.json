@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "name": "Vasu Dev",
+    "title": "NextJS Full Stack Engineer",
+    "email": "contact@vasusinghal.com",
+    "github": "https://github.com/vasusinghal-dev",
+    "linkedin": "https://linkedin.com/in/vasusinghal-dev",
+    "location": "Delhi, India",
+    "resume_html": "/resume/VasuDev_Resume.html",
+    "resume_pdf": "/resume/VasuDev_Resume.pdf"
+  },
+  "header": {
+    "sections": [
+      { "id": "hero", "label": "Home" },
+      { "id": "projects", "label": "Work" },
+      { "id": "about", "label": "Philosophy" },
+      { "id": "timeline", "label": "Journey" },
+      { "id": "contact", "label": "Contact" }
+    ]
+  },
+  "hero": {
+    "statement": "NextJS Scalable Full-Stack Applications",
+    "description": "I design and ship production-ready web apps using Next.js, React, and modern backend tooling — focused on performance, clean architecture, and real-world reliability.",
+    "cta": "Explore my work"
+  },
+  "techStack": {
+    "title": "Technical Toolkit",
+    "description": "Technologies I work with regularly and intentionally",
+    "categories": [
+      {
+        "name": "Core",
+        "items": ["Next.js", "React", "TypeScript"]
+      },
+      {
+        "name": "Frontend",
+        "items": ["Tailwind CSS", "GSAP"]
+      },
+      {
+        "name": "Backend",
+        "items": ["PostgreSQL", "Prisma", "Better Auth", "Zod"]
+      },
+      {
+        "name": "Infrastructure & Services",
+        "items": ["Cloudinary", "Postmark", "Arcjet", "Resend"]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "project-trackwise",
+      "title": "Trackwise — Job Tracking, Without Chaos",
+      "description": "A server-first job application tracking SaaS designed around real hiring workflows — not spreadsheets or vanity dashboards.",
+      "decisions": [
+        "Designed the product around actions and follow-ups instead of static application lists",
+        "Kept the dashboard focused on what needs attention now, avoiding charts and metrics early on",
+        "Used server-side mutations with Next.js Server Actions for predictable data flow and security",
+        "Tracked application history as a timeline of events rather than scattered fields",
+        "Centralized validation with shared Zod schemas to prevent silent data corruption across layers"
+      ],
+      "tech": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "Zod",
+        "Better Auth",
+        "Tailwind CSS",
+        "GSAP",
+        "Postmark",
+        "Arcjet",
+        "Cloudinary"
+      ],
+      "github": "https://github.com/vasusinghal-dev/trackwise",
+      "live": "https://www.vasusinghal.com/trackwise",
+      "thumbnail": "/projects/trackwise.png"
+    },
+    {
+      "id": "project-portfolio",
+      "title": "Config-Driven Developer Portfolio",
+      "description": "A minimal, professional developer portfolio built as a data-driven system rather than a content-heavy website.",
+      "decisions": [
+        "Made a single JSON file the source of truth so content edits never require touching JSX",
+        "Designed UI components to render data only, enforcing separation between content and presentation",
+        "Used GSAP only for subtle entrances and interaction feedback — never decorative motion",
+        "Contact Form – Server-side form validation with Arcjet security and Resend email integration"
+      ],
+      "tech": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "GSAP",
+        "Lucide React",
+        "React Icons",
+        "Arcjet",
+        "Resend"
+      ],
+      "github": "https://github.com/vasusinghal-dev/portfolio",
+      "live": "https://www.vasusinghal.com",
+      "thumbnail": "/projects/portfolio.png"
+    }
+  ],
+  "about": {
+    "title": "Design & Engineering Philosophy",
+    "sections": [
+      {
+        "title": "Intentional Architecture",
+        "content": "Every technical decision should serve a clear purpose. I favor simple, composable systems over complex abstractions that obscure intent."
+      },
+      {
+        "title": "Sustainable Code",
+        "content": "Code is read more often than written. I prioritize clarity and maintainability, using patterns that make the system's behavior predictable."
+      },
+      {
+        "title": "Thoughtful Interaction",
+        "content": "Motion and animation should enhance understanding, not distract. Every transition should feel purposeful and connected to user action."
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "year": "Late 2025 – Present",
+      "title": "Independent Full-Stack Developer",
+      "company": "Self-Directed Projects",
+      "description": "Building production-focused full-stack applications with Next.js, React, and PostgreSQL. Emphasis on server-first architecture, schema-driven validation, and systems designed for real-world usage."
+    },
+    {
+      "year": "2023 – 2024",
+      "title": "Frontend Development Foundations",
+      "company": "React & Web Fundamentals",
+      "description": "Built multiple small frontend projects to solidify core concepts including component composition, state management, DOM interaction, and responsive UI patterns."
+    },
+    {
+      "year": "2021 – 2025",
+      "title": "Bachelor of Computer Applications (BCA)",
+      "company": "Asian School of Business",
+      "description": "Studied computer applications with a practical focus on software fundamentals and web development. CGPA: 7.8 / 10."
+    }
+  ],
+  "contact": {
+    "title": "Get In Touch",
+    "description": "If you’re working on something meaningful and need a developer who cares about clarity, systems, and long-term maintainability, let’s talk.",
+    "email": "contact@vasusinghal.com",
+    "note": "Messages are read carefully. If it’s a good fit, I’ll respond."
+  }
+}

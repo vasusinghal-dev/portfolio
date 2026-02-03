@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vasu Dev – NextJS Full Stack Engineer</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Calibri", "Segoe UI", Arial, sans-serif;
+        line-height: 1.45;
+        color: #2c3e50;
+        background: #fff;
+        max-width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        padding: 15mm 20mm;
+      }
+
+      h1 {
+        font-size: 28pt;
+        font-weight: 700;
+        color: #000;
+      }
+
+      .tagline {
+        font-size: 12pt;
+        color: #555;
+        margin: 8px 0 12px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      h2 {
+        font-size: 14pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 14px 0 8px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid #ddd;
+        color: #000;
+      }
+
+      p {
+        font-size: 10.5pt;
+        margin-bottom: 5px;
+        color: #444;
+      }
+
+      ul {
+        padding-left: 18px;
+        margin-bottom: 6px;
+      }
+
+      li {
+        font-size: 10pt;
+        margin-bottom: 4px;
+        line-height: 1.45;
+      }
+
+      .highlight {
+        font-weight: 600;
+        color: #000;
+      }
+
+      a,
+      .email-copy {
+        color: #0066cc;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      a:hover,
+      .email-copy:hover {
+        text-decoration: none;
+      }
+
+      .contact-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 6px;
+        font-size: 10pt;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .contact-item i {
+        width: 14px;
+        color: #666;
+      }
+
+      .main-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 22px;
+        margin-top: 8px;
+      }
+
+      .section {
+        margin-bottom: 16px;
+        page-break-inside: avoid;
+      }
+
+      .project-title {
+        font-size: 11.5pt;
+        font-weight: 700;
+        color: #000;
+        margin-top: 10px;
+      }
+
+      .project-role {
+        font-size: 10pt;
+        color: #666;
+        font-style: italic;
+        margin-bottom: 4px;
+      }
+
+      .tech-stack {
+        font-size: 9.5pt;
+        color: #555;
+        margin: 6px 0 6px;
+      }
+
+      .tech-stack span::after {
+        content: " · ";
+        color: #999;
+      }
+
+      .tech-stack span:last-child::after {
+        content: "";
+      }
+
+      .skills-inline {
+        font-size: 10pt;
+        line-height: 1.45;
+        color: #444;
+      }
+
+      .skill-row {
+        margin-bottom: 6px;
+      }
+
+      .skill-row strong {
+        font-weight: 700;
+        color: #000;
+      }
+
+      .approach-item {
+        padding-left: 14px;
+        position: relative;
+        font-size: 10pt;
+        margin-bottom: 4px;
+      }
+
+      .approach-item::before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: #666;
+      }
+
+      .education-item {
+        margin-bottom: 10px;
+      }
+
+      .education-title {
+        font-size: 10.5pt;
+        font-weight: 600;
+      }
+
+      .education-date {
+        font-size: 9.5pt;
+        color: #666;
+        font-style: italic;
+      }
+
+      @media print {
+        body {
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <h1>VASU DEV</h1>
+      <div class="tagline">
+        Full Stack Engineer | Next.js • TypeScript • SaaS
+      </div>
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i> India • Open to Remote
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <div
+            style="display: flex; flex-direction: column; line-height: 1.2"
+            onclick="navigator.clipboard.writeText('contact@vasusinghal.com')"
+          >
+            <span class="email-copy"> contact@vasusinghal.com </span>
+            <span style="font-size: 9pt; color: #777; cursor: pointer">
+              (click to copy)
+            </span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-linkedin"></i>
+          <a href="https://linkedin.com/in/vasusinghal-dev" target="_blank"
+            >linkedin.com/in/vasusinghal-dev</a
+          >
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/vasusinghal-dev" target="_blank"
+            >github.com/vasusinghal-dev</a
+          >
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-globe"></i>
+          <a href="https://vasusinghal.com" target="_blank">vasusinghal.com</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <!-- LEFT -->
+      <main>
+        <section class="section">
+          <h2>Professional Summary</h2>
+          <p>
+            Full-Stack Developer building
+            <span class="highlight">production-grade SaaS applications</span>
+            using Next.js, TypeScript, and PostgreSQL. Focused on
+            <span class="highlight">
+              server-first architecture, authentication systems, relational data
+              modeling, and type-safe APIs </span
+            >. Experienced in shipping reliable, end-to-end products.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Flagship Project</h2>
+
+          <div class="project-title">Trackwise — Job Tracking SaaS</div>
+          <div class="project-role">Full-Stack Developer</div>
+
+          <ul>
+            <li>
+              Built a
+              <span class="highlight">server-first SaaS architecture</span>
+              using Next.js Server Actions
+            </li>
+            <li>
+              Designed a
+              <span class="highlight">normalized PostgreSQL schema</span>
+              with Prisma
+            </li>
+            <li>
+              Implemented authentication with
+              <span class="highlight">Better Auth</span>
+            </li>
+            <li>
+              Centralized schema validation using
+              <span class="highlight">Zod</span>
+            </li>
+            <li>Integrated Cloudinary, Postmark, and Arcjet</li>
+          </ul>
+
+          <div class="tech-stack">
+            <span>Next.js</span><span>React</span><span>TypeScript</span>
+            <span>PostgreSQL</span><span>Prisma</span><span>Better Auth</span>
+            <span>Zod</span><span>Tailwind CSS</span><span>GSAP</span
+            ><span>Vercel</span>
+          </div>
+
+          <p>
+            🔗
+            <a
+              href="https://github.com/vasusinghal-dev/trackwise"
+              target="_blank"
+              >GitHub Repository</a
+            >
+            ·
+            <a href="https://www.vasusinghal.com/trackwise" target="_blank"
+              >Live Demo</a
+            >
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Additional Projects</h2>
+
+          <div class="project-title">Config-Driven Developer Portfolio</div>
+          <div class="project-role">Full-Stack Developer</div>
+
+          <ul>
+            <li>Built a data-driven architecture separating content from UI</li>
+            <li>
+              Implemented email delivery using
+              <span class="highlight">Resend</span>
+            </li>
+            <li>
+              Secured submissions with <span class="highlight">Arcjet</span>
+            </li>
+          </ul>
+
+          <div class="tech-stack">
+            <span>Next.js</span><span>React</span><span>TypeScript</span>
+            <span>Tailwind CSS</span><span>GSAP</span><span>Resend</span
+            ><span>Arcjet</span>
+          </div>
+
+          <p>
+            🔗
+            <a
+              href="https://github.com/vasusinghal-dev/portfolio"
+              target="_blank"
+              >GitHub</a
+            >
+            ·
+            <a href="https://www.vasusinghal.com" target="_blank">Live Site</a>
+          </p>
+
+          <div class="project-title">Trailerflix — Movie Trailer Platform</div>
+          <div class="project-role">Frontend Developer</div>
+
+          <ul>
+            <li>
+              Built responsive, mobile-first UI using
+              <span class="highlight">Tailwind CSS</span>
+            </li>
+            <li>
+              Integrated <span class="highlight">TMDB API</span> for dynamic
+              movie and trailer data
+            </li>
+            <li>
+              Implemented <span class="highlight">Redux Toolkit</span> for
+              predictable global state management
+            </li>
+          </ul>
+
+          <div class="tech-stack">
+            <span>React</span><span>Redux Toolkit</span><span>Tailwind CSS</span
+            ><span>JavaScript</span><span>TMDB API</span>
+          </div>
+
+          <p>
+            🔗
+            <a
+              href="https://github.com/vasusinghal-dev/trailerflix"
+              target="_blank"
+              >GitHub</a
+            >
+            ·
+            <a href="https://vasusinghal.com/trailerflix" target="_blank"
+              >Live Demo</a
+            >
+          </p>
+        </section>
+      </main>
+
+      <!-- RIGHT -->
+      <aside>
+        <section class="section">
+          <h2>Technical Skills</h2>
+
+          <div class="skills-inline">
+            <div class="skill-row">
+              <strong>Frontend:</strong>
+              React · Next.js (App Router, Server Actions) · TypeScript ·
+              JavaScript · Tailwind CSS · GSAP
+            </div>
+
+            <div class="skill-row">
+              <strong>Backend & Data:</strong>
+              PostgreSQL · Prisma ORM · REST APIs · Authentication (OAuth,
+              Sessions) · Zod
+            </div>
+
+            <div class="skill-row">
+              <strong>Infrastructure & Services:</strong>
+              Vercel · Cloudinary · Postmark · Resend · Arcjet
+            </div>
+
+            <div class="skill-row">
+              <strong>Workflow:</strong>
+              Git · GitHub
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Education</h2>
+
+          <div class="education-item">
+            <div class="education-title">
+              Bachelor of Computer Applications (BCA)
+            </div>
+            <div class="education-date">2021 – 2025</div>
+            <div>Asian School of Business</div>
+            <div>CGPA: <span class="highlight">7.8 / 10</span></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Engineering Approach</h2>
+          <div class="approach-item">
+            Server-first design for security and correctness
+          </div>
+          <div class="approach-item">
+            Type safety across frontend, backend, and database
+          </div>
+          <div class="approach-item">
+            Workflow-based modeling over UI-first implementations
+          </div>
+        </section>
+      </aside>
+    </div>
+  </body>
+</html>
