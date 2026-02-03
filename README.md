@@ -1,5 +1,8 @@
 # Vasu Dev — Config-Driven Developer Portfolio
 
+🌐 **Live:** https://vasusinghal.com  
+🧩 **Repo:** https://github.com/vasusinghal-dev/portfolio
+
 A minimal, production-grade developer portfolio built as a **data-driven system**, not a content-heavy website.
 
 Instead of hardcoding text into components, the entire site is powered by a single configuration file. Updating content never requires touching JSX — only structured data. The UI stays clean, predictable, and scalable.
@@ -22,10 +25,10 @@ Built with **Next.js 16**, **React 19**, **TypeScript**, and **Tailwind CSS**, w
 
 > _Screenshots go here — replace the placeholders below_
 
-![Homepage Preview](./screenshots/home.png)
-![Projects Modal Preview](./screenshots/projects-modal.png)
-![Tech Stack Preview](./screenshots/techstack.png)
-![Contact Form Preview](./screenshots/contact.png)
+![Homepage Preview](public//screenshots/home.png)
+![Projects Modal Preview](public//screenshots/projects-modal.png)
+![Tech Stack Preview](public//screenshots/techstack.png)
+![Contact Form Preview](public//screenshots/contact.png)
 
 ---
 
