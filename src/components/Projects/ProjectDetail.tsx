@@ -32,24 +32,26 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                 </h1>
 
                 <div className="flex items-center gap-4 mt-8">
-                  <a
-                    href={project.github}
+                  <Link
+                    href={project.links.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/20 text-primary hover:bg-primary/15 hover:border-primary/30 transition-all duration-300 group/link"
                   >
                     View Repository
                     <ArrowUpRight className="w-4 h-4 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
-                  </a>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/20 text-primary hover:bg-primary/15 hover:border-primary/30 transition-all duration-300 group/link"
-                  >
-                    Live Preview
-                    <ArrowUpRight className="w-4 h-4 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
-                  </a>
+                  </Link>
+                  {project.id !== "portfolio" && (
+                    <Link
+                      href={project.links.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/20 text-primary hover:bg-primary/15 hover:border-primary/30 transition-all duration-300 group/link"
+                    >
+                      Live Preview
+                      <ArrowUpRight className="w-4 h-4 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                    </Link>
+                  )}
 
                   <div className="flex items-center gap-2 text-sm text-foreground/50">
                     <div className="w-2 h-2 rounded-full bg-green-500/60 animate-pulse"></div>
@@ -236,7 +238,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 
               {/* View Code CTA */}
               <a
-                href={project.github}
+                href={project.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block rounded-2xl border border-border/50 bg-gradient-to-br from-primary/5 to-primary/2 p-6 hover:border-primary/30 hover:from-primary/10 hover:to-primary/5 transition-all duration-300 group/cta"

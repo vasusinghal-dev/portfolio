@@ -47,7 +47,7 @@
   },
   "projects": [
     {
-      "id": "project-trackwise",
+      "id": "trackwise",
       "title": "Trackwise — Job Tracking, Without Chaos",
       "description": "A server-first job application tracking SaaS designed around real hiring workflows — not spreadsheets or vanity dashboards.",
       "decisions": [
@@ -71,12 +71,14 @@
         "Arcjet",
         "Cloudinary"
       ],
-      "github": "https://github.com/vasusinghal-dev/trackwise",
-      "live": "https://www.vasusinghal.com/trackwise",
+      "links": {
+        "github": "https://github.com/vasusinghal-dev/trackwise",
+        "live": "https://trackwise.vasusinghal.com/"
+      },
       "thumbnail": "/projects/trackwise.png"
     },
     {
-      "id": "project-portfolio",
+      "id": "portfolio",
       "title": "Config-Driven Developer Portfolio",
       "description": "A minimal, professional developer portfolio built as a data-driven system rather than a content-heavy website.",
       "decisions": [
@@ -96,8 +98,10 @@
         "Arcjet",
         "Resend"
       ],
-      "github": "https://github.com/vasusinghal-dev/portfolio",
-      "live": "https://www.vasusinghal.com",
+      "links": {
+        "github": "https://github.com/vasusinghal-dev/portfolio",
+        "live": "https://www.vasusinghal.com"
+      },
       "thumbnail": "/projects/portfolio.png"
     }
   ],

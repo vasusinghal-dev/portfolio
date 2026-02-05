@@ -1,5 +1,6 @@
-import { Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import data from "@/src/data/portfolio.json";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export function Footer() {
   return (
@@ -13,20 +14,13 @@ export function Footer() {
 
           <div className="flex items-center gap-6">
             <a
-              href={`mailto:${data.meta.email}`}
-              className="text-foreground/60 hover:text-foreground transition-colors"
-              aria-label="Email"
-            >
-              <Mail className="w-5 h-5" />
-            </a>
-            <a
               href={data.meta.github}
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/60 hover:text-foreground transition-colors"
               aria-label="GitHub"
             >
-              <Github className="w-5 h-5" />
+              <FaGithub className="w-5 h-5" />
             </a>
             <a
               href={data.meta.linkedin}
@@ -35,7 +29,7 @@ export function Footer() {
               className="text-foreground/60 hover:text-foreground transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin className="w-5 h-5" />
+              <FaLinkedin className="w-5 h-5" />
             </a>
             <div className="flex items-center gap-2 text-sm text-foreground/60">
               <MapPin className="w-4 h-4" />
