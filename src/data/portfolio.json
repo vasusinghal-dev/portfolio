@@ -47,6 +47,38 @@
   },
   "projects": [
     {
+      "id": "prepai",
+      "title": "PrepAI — AI-Powered Interview Report Generator",
+      "description": "An AI-driven interview preparation platform that analyzes job descriptions, resumes, and user profiles to generate structured interview reports, skill gap analysis, and personalized learning roadmaps.",
+      "decisions": [
+        "Designed the system to generate structured interview reports instead of raw AI output, improving usability and clarity",
+        "Separated AI generation logic into a dedicated service layer to maintain clean architecture and easier prompt iteration",
+        "Used PDF parsing to extract resume data automatically, reducing manual input friction",
+        "Modeled interview reports as persistent entities, allowing users to revisit and track preparation over time",
+        "Implemented authentication and report isolation to ensure user-specific data security",
+        "Handled AI output sanitization to prevent malformed or unsafe responses from breaking the UI",
+        "Built PDF generation pipeline for AI-enhanced resumes, dealing with headless browser constraints in production"
+      ],
+      "tech": [
+        "React",
+        "React Router",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Mongoose",
+        "JWT",
+        "Multer",
+        "Google Gemini AI",
+        "pdf-parse",
+        "SCSS"
+      ],
+      "links": {
+        "github": "https://github.com/vasusinghal-dev/PrepAI",
+        "live": "https://prepai.vasusinghal.com"
+      },
+      "thumbnail": "/projects/prepai.png"
+    },
+    {
       "id": "trackwise",
       "title": "Trackwise — Job Tracking, Without Chaos",
       "description": "A server-first job application tracking SaaS designed around real hiring workflows — not spreadsheets or vanity dashboards.",
