@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "Vasu Dev",
-    "title": "NextJS Full Stack Engineer",
+    "title": "Full-Stack & AI Engineer",
     "email": "contact@vasusinghal.com",
     "github": "https://github.com/vasusinghal-dev",
     "linkedin": "https://linkedin.com/in/vasusinghal-dev",
@@ -19,13 +19,13 @@
     ]
   },
   "hero": {
-    "statement": "NextJS Scalable Full-Stack Applications",
-    "description": "I design and ship production-ready web apps using Next.js, React, and modern backend tooling — focused on performance, clean architecture, and real-world reliability.",
+    "statement": "Building Scalable Full-Stack & AI-Powered Applications",
+    "description": "I design and ship production-ready web and AI-powered applications using Next.js, React, and modern backend systems — focused on performance, clean architecture, and real-world reliability.",
     "cta": "Explore my work"
   },
   "techStack": {
     "title": "Technical Toolkit",
-    "description": "Technologies I work with regularly and intentionally",
+    "description": "Technologies I use to build scalable systems and AI-driven products",
     "categories": [
       {
         "name": "Core",
@@ -37,31 +37,86 @@
       },
       {
         "name": "Backend",
-        "items": ["PostgreSQL", "Prisma", "Better Auth", "Zod"]
+        "items": [
+          "Node.js",
+          "Express",
+          "PostgreSQL",
+          "MongoDB",
+          "Prisma",
+          "Zod",
+          "JWT",
+          "Multer"
+        ]
+      },
+      {
+        "name": "AI & Integrations",
+        "items": ["OpenRouter", "Replicate", "Google Gemini", "Axios"]
       },
       {
         "name": "Infrastructure & Services",
-        "items": ["Cloudinary", "Postmark", "Arcjet", "Resend"]
+        "items": [
+          "Cloudinary",
+          "Postmark",
+          "Arcjet",
+          "Resend",
+          "Clerk",
+          "Sentry"
+        ]
       }
     ]
   },
   "projects": [
     {
+      "id": "ugc-ai",
+      "title": "UGC-AI — AI SaaS for Ad Creative Generation",
+      "description": "An AI-powered SaaS that generates UGC-style ad creatives from a product image and a person — transforming static inputs into lifestyle visuals and short-form marketing videos.",
+      "decisions": [
+        "Designed a multi-step AI pipeline (image → video) instead of isolated generation, enabling real marketing workflows",
+        "Integrated multiple model providers (Gemini, OpenRouter, Replicate) to avoid vendor lock-in and optimize cost vs quality",
+        "Switched from Gemini to free-tier models due to pricing constraints, maintaining product continuity under budget limits",
+        "Handled asynchronous processing for long-running AI tasks with retry logic and failure recovery",
+        "Implemented a credit-based system aligned with compute-heavy AI operations",
+        "Designed the system to be model-agnostic, allowing future upgrades without architectural changes",
+        "Managed inconsistent AI outputs with validation and fallback handling to prevent UI breakage",
+        "Deployed backend on Render, accounting for cold-start latency in UX"
+      ],
+      "tech": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Prisma",
+        "Cloudinary",
+        "Clerk",
+        "OpenRouter",
+        "Replicate",
+        "Google Gemini AI",
+        "Axios",
+        "Tailwind CSS",
+        "Sentry"
+      ],
+      "links": {
+        "github": "https://github.com/vasusinghal-dev/ugc-ai",
+        "live": "https://ugc-ai.vasusinghal.com"
+      },
+      "thumbnail": "/projects/ugc-ai.png"
+    },
+    {
       "id": "prepai",
       "title": "PrepAI — AI-Powered Interview Report Generator",
-      "description": "An AI-driven interview preparation platform that analyzes job descriptions, resumes, and user profiles to generate structured interview reports, skill gap analysis, and personalized learning roadmaps.",
+      "description": "An AI-driven platform that analyzes job descriptions and resumes to generate structured interview reports, skill gap analysis, and personalized preparation plans.",
       "decisions": [
-        "Designed the system to generate structured interview reports instead of raw AI output, improving usability and clarity",
-        "Separated AI generation logic into a dedicated service layer to maintain clean architecture and easier prompt iteration",
-        "Used PDF parsing to extract resume data automatically, reducing manual input friction",
-        "Modeled interview reports as persistent entities, allowing users to revisit and track preparation over time",
-        "Implemented authentication and report isolation to ensure user-specific data security",
-        "Handled AI output sanitization to prevent malformed or unsafe responses from breaking the UI",
-        "Built PDF generation pipeline for AI-enhanced resumes, dealing with headless browser constraints in production"
+        "Designed structured AI outputs instead of raw responses to improve usability and clarity",
+        "Separated AI logic into a service layer for maintainability and prompt iteration",
+        "Automated resume parsing using PDF extraction to reduce manual input friction",
+        "Stored reports as persistent entities for long-term tracking and reuse",
+        "Implemented strict validation and sanitization to prevent malformed AI outputs",
+        "Built PDF generation pipeline with real-world constraints"
       ],
       "tech": [
         "React",
-        "React Router",
         "Node.js",
         "Express",
         "MongoDB",
@@ -70,6 +125,7 @@
         "Multer",
         "Google Gemini AI",
         "pdf-parse",
+        "Axios",
         "SCSS"
       ],
       "links": {
@@ -81,13 +137,13 @@
     {
       "id": "trackwise",
       "title": "Trackwise — Job Tracking, Without Chaos",
-      "description": "A server-first job application tracking SaaS designed around real hiring workflows — not spreadsheets or vanity dashboards.",
+      "description": "A server-first job application tracking SaaS designed around real workflows — focusing on actions, follow-ups, and clarity instead of dashboards.",
       "decisions": [
-        "Designed the product around actions and follow-ups instead of static application lists",
-        "Kept the dashboard focused on what needs attention now, avoiding charts and metrics early on",
-        "Used server-side mutations with Next.js Server Actions for predictable data flow and security",
-        "Tracked application history as a timeline of events rather than scattered fields",
-        "Centralized validation with shared Zod schemas to prevent silent data corruption across layers"
+        "Designed around actionable workflows instead of passive tracking",
+        "Used Next.js Server Actions for secure and predictable mutations",
+        "Modeled job tracking as a timeline of events",
+        "Centralized validation using shared Zod schemas",
+        "Prioritized clarity over analytics-heavy dashboards"
       ],
       "tech": [
         "Next.js",
@@ -112,12 +168,12 @@
     {
       "id": "portfolio",
       "title": "Config-Driven Developer Portfolio",
-      "description": "A minimal, professional developer portfolio built as a data-driven system rather than a content-heavy website.",
+      "description": "A minimal, data-driven developer portfolio where content is fully separated from presentation using a single JSON source of truth.",
       "decisions": [
-        "Made a single JSON file the source of truth so content edits never require touching JSX",
-        "Designed UI components to render data only, enforcing separation between content and presentation",
-        "Used GSAP only for subtle entrances and interaction feedback — never decorative motion",
-        "Contact Form – Server-side form validation with Arcjet security and Resend email integration"
+        "Centralized all content in a single JSON file to eliminate JSX edits",
+        "Built UI components as pure render layers for strict separation of concerns",
+        "Used GSAP minimally for meaningful interaction feedback",
+        "Implemented secure contact form with Arcjet validation and Resend email handling"
       ],
       "tech": [
         "Next.js",
@@ -142,41 +198,51 @@
     "sections": [
       {
         "title": "Intentional Architecture",
-        "content": "Every technical decision should serve a clear purpose. I favor simple, composable systems over complex abstractions that obscure intent."
+        "content": "Every technical decision should serve a clear purpose. I favor simple, composable systems over unnecessary abstraction."
+      },
+      {
+        "title": "Systems Over Demos",
+        "content": "I focus on building complete systems — handling edge cases, failures, and real-world constraints instead of just happy-path demos."
       },
       {
         "title": "Sustainable Code",
-        "content": "Code is read more often than written. I prioritize clarity and maintainability, using patterns that make the system's behavior predictable."
+        "content": "Code should be predictable and maintainable. I prioritize clarity so systems remain easy to extend over time."
       },
       {
         "title": "Thoughtful Interaction",
-        "content": "Motion and animation should enhance understanding, not distract. Every transition should feel purposeful and connected to user action."
+        "content": "UI and motion should support understanding, not decoration. Every interaction should feel intentional."
       }
     ]
   },
   "timeline": [
     {
+      "year": "2026 – 2027",
+      "title": "Master of Computer Applications (MCA)",
+      "company": "Manipal University Jaipur",
+      "description": "Pursuing advanced studies in computer applications with a focus on system design, scalable architectures, and AI-driven applications."
+    },
+    {
       "year": "Late 2025 – Present",
-      "title": "Independent Full-Stack Developer",
+      "title": "Independent Full-Stack & AI Developer",
       "company": "Self-Directed Projects",
-      "description": "Building production-focused full-stack applications with Next.js, React, and PostgreSQL. Emphasis on server-first architecture, schema-driven validation, and systems designed for real-world usage."
+      "description": "Building production-focused applications combining full-stack systems with AI pipelines, async processing, and real-world constraints."
     },
     {
       "year": "2023 – 2024",
       "title": "Frontend Development Foundations",
       "company": "React & Web Fundamentals",
-      "description": "Built multiple small frontend projects to solidify core concepts including component composition, state management, DOM interaction, and responsive UI patterns."
+      "description": "Built multiple projects to master UI architecture, state management, and responsive design."
     },
     {
       "year": "2021 – 2025",
       "title": "Bachelor of Computer Applications (BCA)",
       "company": "Asian School of Business",
-      "description": "Studied computer applications with a practical focus on software fundamentals and web development. CGPA: 7.8 / 10."
+      "description": "Focused on software development and practical web technologies. CGPA: 7.8 / 10."
     }
   ],
   "contact": {
     "title": "Get In Touch",
-    "description": "If you’re working on something meaningful and need a developer who cares about clarity, systems, and long-term maintainability, let’s talk.",
+    "description": "If you're building something meaningful and need a developer who understands systems, scalability, and AI integration — let's connect.",
     "email": "contact@vasusinghal.com",
     "note": "Messages are read carefully. If it’s a good fit, I’ll respond."
   }

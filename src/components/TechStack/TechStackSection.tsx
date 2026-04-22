@@ -2,30 +2,45 @@
 
 import { useEffect, useRef } from "react";
 import data from "@/src/data/portfolio.json";
-import { Code2 } from "lucide-react";
+import {
+  Code2,
+  Layers,
+  Palette,
+  Server,
+  Brain,
+  Cloud,
+  Sparkles,
+} from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { categoryIcons, iconMap } from "@/src/lib/TechConfig";
+import { iconMap } from "@/src/lib/TechConfig";
+
+const categoryIcons: Record<string, React.ReactNode> = {
+  Core: <Layers size={18} />,
+  Frontend: <Palette size={18} />,
+  Backend: <Server size={18} />,
+  "AI & Integrations": <Brain size={18} />,
+  "Infrastructure & Services": <Cloud size={18} />,
+};
 
 export function TechStack() {
   const sectionRef = useRef<HTMLElement>(null);
-  const cardsRef = useRef<HTMLDivElement[]>([]);
+  const categoriesRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
-      cardsRef.current.forEach((card, i) => {
-        gsap.from(card, {
+      categoriesRef.current.forEach((category, i) => {
+        gsap.from(category, {
           scrollTrigger: {
-            trigger: card,
-            start: "top bottom-=100",
-            end: "bottom center",
+            trigger: category,
+            start: "top bottom-=50",
             toggleActions: "play none none reverse",
           },
-          y: 50,
+          y: 40,
           opacity: 0,
-          duration: 0.8,
+          duration: 0.6,
           delay: i * 0.1,
           ease: "power3.out",
         });
@@ -35,100 +50,90 @@ export function TechStack() {
     return () => ctx.revert();
   }, []);
 
-  const addToCardsRef = (el: HTMLDivElement | null) => {
-    if (el && !cardsRef.current.includes(el)) {
-      cardsRef.current.push(el);
+  const addToCategoriesRef = (el: HTMLDivElement | null) => {
+    if (el && !categoriesRef.current.includes(el)) {
+      categoriesRef.current.push(el);
     }
   };
 
+  const categories = data.techStack.categories;
+
   return (
     <section id="tech" ref={sectionRef} className="py-24 px-6">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center gap-3 mb-6">
-            <div className="w-12 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-            <span className="text-sm font-medium text-primary tracking-widest uppercase">
-              Toolkit
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span className="text-xs font-medium text-primary">
+              TECHNOLOGIES
             </span>
-            <div className="w-12 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
             {data.techStack.title}
           </h2>
 
-          <p className="text-foreground/60 max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="text-foreground/50 text-lg">
             {data.techStack.description}
           </p>
         </div>
 
-        {/* Tech Categories Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {data.techStack.categories.map((category) => (
-            <div
-              key={category.name}
-              ref={addToCardsRef}
-              className="group relative bg-gradient-to-br from-card to-card/50 border border-border/50 rounded-2xl p-8 
-                       hover:border-primary/30 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500
-                       backdrop-blur-sm overflow-hidden"
-            >
-              {/* Category Header */}
-              <div className="relative flex items-center gap-3 mb-8">
-                <div
-                  className="p-2 rounded-lg bg-primary/10 border border-primary/20 
-                              group-hover:bg-primary/15 transition-colors"
-                >
+        {/* Categories with Pill Design */}
+        <div className="space-y-12">
+          {categories.map((category) => (
+            <div key={category.name} ref={addToCategoriesRef} className="group">
+              {/* Category Label */}
+              <div className="flex items-center gap-2 mb-4">
+                <div className="p-1.5 rounded-md bg-primary/10">
                   {categoryIcons[category.name]}
                 </div>
-                <h3 className="font-semibold text-xl text-foreground/90">
+                <span className="text-sm font-semibold text-foreground/70 uppercase tracking-wider">
                   {category.name}
-                </h3>
+                </span>
+                <span className="text-xs text-foreground/30">
+                  ({category.items.length})
+                </span>
+                <div className="flex-1 h-px bg-gradient-to-r from-border/30 to-transparent" />
               </div>
 
-              {/* Tech Items */}
-              <div className="relative space-y-4">
+              {/* Tech Pills */}
+              <div className="flex flex-wrap gap-2">
                 {category.items.map((tech) => {
-                  const icon = iconMap[tech].icon || <Code2 size={24} />;
-                  const hoverColor = iconMap[tech].hoverColor;
+                  const item = iconMap[tech];
+                  if (!item) return null;
+
                   return (
                     <div
                       key={tech}
-                      className="flex items-center gap-3 p-3 rounded-lg border border-transparent transition-all duration-300 group/item"
+                      className="group/pill inline-flex items-center gap-2 px-3 py-1.5
+                                 rounded-full bg-gradient-to-r from-card/50 to-card/30
+                                 border border-border/30 backdrop-blur-sm
+                                 hover:border-primary/40 hover:shadow-md hover:shadow-primary/5
+                                 transition-all duration-300 cursor-pointer"
                     >
-                      <div
-                        className={`p-2 rounded-md bg-foreground/5 border border-border/50
-                                    group-hover/item:bg-primary/10 group-hover/item:border-primary/30
-                                    transition-colors text-foreground ${hoverColor}`}
-                      >
-                        {icon}
-                      </div>
                       <span
-                        className="text-lg font-medium text-foreground/80 
-                                     group-hover/item:text-foreground transition-colors"
+                        className={`transition-transform duration-300 group-hover/pill:scale-110 ${item.hoverColor}`}
                       >
+                        {item.icon}
+                      </span>
+                      <span className="text-sm font-medium text-foreground/70 group-hover/pill:text-foreground">
                         {tech}
                       </span>
                     </div>
                   );
                 })}
               </div>
-
-              {/* Decorative corner */}
-              <div className="absolute top-0 right-0 w-16 h-16 overflow-hidden">
-                <div
-                  className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-bl from-primary/10 to-transparent 
-                              transform rotate-45 group-hover:from-primary/20 transition-colors"
-                />
-              </div>
-
-              {/* Hover line indicator */}
-              <div
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent
-                            group-hover:w-3/4 transition-all duration-500"
-              />
             </div>
           ))}
+        </div>
+
+        {/* Bottom Note */}
+        <div className="mt-12 text-center">
+          <p className="text-xs text-foreground/30 flex items-center justify-center gap-2">
+            <Code2 className="w-3 h-3" />
+            Constantly learning and expanding my toolkit
+          </p>
         </div>
       </div>
     </section>

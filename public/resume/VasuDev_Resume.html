@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vasu Dev – NextJS Full Stack Engineer</title>
+    <title>Shadow – Full-Stack & AI Engineer</title>
 
     <link
       rel="stylesheet"
@@ -83,7 +83,7 @@
 
       a:hover,
       .email-copy:hover {
-        text-decoration: none;
+        text-decoration: underline;
       }
 
       .contact-info {
@@ -164,7 +164,7 @@
         padding-left: 14px;
         position: relative;
         font-size: 10pt;
-        margin-bottom: 4px;
+        margin-bottom: 6px;
       }
 
       .approach-item::before {
@@ -189,9 +189,80 @@
         font-style: italic;
       }
 
+      .timeline-item {
+        margin-bottom: 12px;
+      }
+
+      .timeline-title {
+        font-size: 10.5pt;
+        font-weight: 600;
+        color: #000;
+      }
+
+      .timeline-subtitle {
+        font-size: 9.5pt;
+        color: #666;
+        font-style: italic;
+        margin-bottom: 3px;
+      }
+
+      /* UPDATED TIMELINE STYLES - More compact and balanced */
+      .timeline-compact {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .timeline-compact-item {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+
+      .timeline-year {
+        min-width: 80px;
+        font-size: 9.5pt;
+        font-weight: 600;
+        color: #0066cc;
+        padding-top: 1px;
+      }
+
+      .timeline-content {
+        flex: 1;
+      }
+
+      .timeline-content-title {
+        font-size: 10pt;
+        font-weight: 600;
+        color: #000;
+        line-height: 1.3;
+      }
+
+      .timeline-content-sub {
+        font-size: 9pt;
+        color: #666;
+        margin-top: 2px;
+        line-height: 1.3;
+      }
+
+      .ai-badge {
+        background: #e8f0fe;
+        color: #0066cc;
+        font-size: 8pt;
+        padding: 2px 6px;
+        border-radius: 12px;
+        display: inline-block;
+        margin-left: 8px;
+        font-weight: normal;
+      }
+
       @media print {
         body {
           margin: 0;
+          padding: 10mm;
+        }
+        a {
+          text-decoration: none;
         }
       }
     </style>
@@ -200,14 +271,14 @@
   <body>
     <!-- HEADER -->
     <header>
-      <h1>VASU DEV</h1>
+      <h1>Vasu Singhal</h1>
       <div class="tagline">
-        Full Stack Engineer | Next.js • TypeScript • SaaS
+        Full-Stack & AI Engineer | Next.js • TypeScript • AI Integration • SaaS
       </div>
 
       <div class="contact-info">
         <div class="contact-item">
-          <i class="fas fa-map-marker-alt"></i> India • Open to Remote
+          <i class="fas fa-map-marker-alt"></i> Delhi, India • Open to Remote
         </div>
         <div class="contact-item">
           <i class="fas fa-envelope"></i>
@@ -241,143 +312,118 @@
     </header>
 
     <div class="main-content">
-      <!-- LEFT -->
+      <!-- LEFT COLUMN -->
       <main>
         <section class="section">
           <h2>Professional Summary</h2>
           <p>
-            Full-Stack Developer building
-            <span class="highlight">production-grade SaaS applications</span>
-            using Next.js, TypeScript, and PostgreSQL. Focused on
-            <span class="highlight">
-              server-first architecture, authentication systems, relational data
-              modeling, and type-safe APIs </span
-            >. Experienced in shipping reliable, end-to-end products.
+            Full-Stack & AI Engineer building
+            <span class="highlight"
+              >production-grade SaaS and AI-powered applications</span
+            >
+            using Next.js, React, TypeScript, and modern backend systems.
+            Specializes in
+            <span class="highlight"
+              >AI pipeline integration, server-first architecture, and scalable
+              systems</span
+            >
+            — focused on performance, clean architecture, and real-world
+            reliability.
           </p>
         </section>
 
         <section class="section">
-          <h2>Flagship Project</h2>
+          <h2>Featured Projects</h2>
 
-          <div class="project-title">Trackwise — Job Tracking SaaS</div>
-          <div class="project-role">Full-Stack Developer</div>
-
+          <!-- UGC-AI -->
+          <div class="project-title">
+            UGC-AI — AI SaaS for Ad Creative Generation
+            <span class="ai-badge">AI-Powered</span>
+          </div>
+          <div class="project-role">Full-Stack & AI Engineer</div>
           <ul>
             <li>
-              Built a
-              <span class="highlight">server-first SaaS architecture</span>
-              using Next.js Server Actions
+              Designed multi-step AI pipeline (image → video) enabling real
+              marketing workflows
             </li>
             <li>
-              Designed a
-              <span class="highlight">normalized PostgreSQL schema</span>
-              with Prisma
+              Integrated multiple AI providers (Gemini, OpenRouter, Replicate)
+              to avoid vendor lock-in
             </li>
             <li>
-              Implemented authentication with
-              <span class="highlight">Better Auth</span>
+              Implemented credit-based system for compute-heavy AI operations
             </li>
             <li>
-              Centralized schema validation using
-              <span class="highlight">Zod</span>
+              Built asynchronous processing with retry logic and failure
+              recovery
             </li>
-            <li>Integrated Cloudinary, Postmark, and Arcjet</li>
+            <li>
+              Created model-agnostic architecture allowing future upgrades
+              without rewrites
+            </li>
           </ul>
-
           <div class="tech-stack">
             <span>Next.js</span><span>React</span><span>TypeScript</span>
-            <span>PostgreSQL</span><span>Prisma</span><span>Better Auth</span>
-            <span>Zod</span><span>Tailwind CSS</span><span>GSAP</span
-            ><span>Vercel</span>
+            <span>Node.js</span><span>Express</span><span>MongoDB</span>
+            <span>Prisma</span><span>Cloudinary</span><span>Clerk</span>
+            <span>OpenRouter</span><span>Replicate</span>
+            <span>Google Gemini AI</span><span>Tailwind CSS</span
+            ><span>Sentry</span>
           </div>
-
           <p>
             🔗
-            <a
-              href="https://github.com/vasusinghal-dev/trackwise"
-              target="_blank"
+            <a href="https://github.com/vasusinghal-dev/ugc-ai" target="_blank"
               >GitHub</a
             >
             ·
-            <a href="https://trackwise.vasusinghal.com" target="_blank"
+            <a href="https://ugc-ai.vasusinghal.com" target="_blank"
               >Live Demo</a
             >
           </p>
-        </section>
 
-        <section class="section">
-          <h2>Additional Projects</h2>
-
-          <div class="project-title">Config-Driven Developer Portfolio</div>
-          <div class="project-role">Full-Stack Developer</div>
-
-          <ul>
-            <li>Built a data-driven architecture separating content from UI</li>
-            <li>
-              Implemented email delivery using
-              <span class="highlight">Resend</span>
-            </li>
-            <li>
-              Secured submissions with <span class="highlight">Arcjet</span>
-            </li>
-          </ul>
-
-          <div class="tech-stack">
-            <span>Next.js</span><span>React</span><span>TypeScript</span>
-            <span>Tailwind CSS</span><span>GSAP</span><span>Resend</span
-            ><span>Arcjet</span>
+          <!-- PrepAI -->
+          <div class="project-title">
+            PrepAI — AI Interview Report Generator
+            <span class="ai-badge">AI-Powered</span>
           </div>
-
+          <div class="project-role">Full-Stack & AI Engineer</div>
+          <ul>
+            <li>
+              Built AI-driven platform analyzing JDs and resumes for interview
+              reports
+            </li>
+            <li>
+              Designed structured AI outputs with validation and sanitization
+            </li>
+            <li>
+              Automated resume parsing using PDF extraction to reduce manual
+              friction
+            </li>
+            <li>
+              Implemented persistent report storage for long-term tracking
+            </li>
+            <li>Created PDF generation pipeline with real-world constraints</li>
+          </ul>
+          <div class="tech-stack">
+            <span>React</span><span>Node.js</span><span>Express</span>
+            <span>MongoDB</span><span>Mongoose</span><span>JWT</span>
+            <span>Multer</span><span>Google Gemini AI</span
+            ><span>pdf-parse</span> <span>Axios</span><span>SCSS</span>
+          </div>
           <p>
             🔗
-            <a
-              href="https://github.com/vasusinghal-dev/portfolio"
-              target="_blank"
+            <a href="https://github.com/vasusinghal-dev/PrepAI" target="_blank"
               >GitHub</a
             >
             ·
-            <a href="https://www.vasusinghal.com" target="_blank">Live Site</a>
-          </p>
-
-          <div class="project-title">Trailerflix — Movie Trailer Platform</div>
-          <div class="project-role">Frontend Developer</div>
-
-          <ul>
-            <li>
-              Built responsive, mobile-first UI using
-              <span class="highlight">Tailwind CSS</span>
-            </li>
-            <li>
-              Integrated <span class="highlight">TMDB API</span> for dynamic
-              movie and trailer data
-            </li>
-            <li>
-              Implemented <span class="highlight">Redux Toolkit</span> for
-              predictable global state management
-            </li>
-          </ul>
-
-          <div class="tech-stack">
-            <span>React</span><span>Redux Toolkit</span><span>Tailwind CSS</span
-            ><span>JavaScript</span><span>TMDB API</span>
-          </div>
-
-          <p>
-            🔗
-            <a
-              href="https://github.com/vasusinghal-dev/trailerflix"
-              target="_blank"
-              >GitHub</a
-            >
-            ·
-            <a href="https://trailerflix.vasusinghal.com" target="_blank"
+            <a href="https://prepai.vasusinghal.com" target="_blank"
               >Live Demo</a
             >
           </p>
         </section>
       </main>
 
-      <!-- RIGHT -->
+      <!-- RIGHT COLUMN -->
       <aside>
         <section class="section">
           <h2>Technical Skills</h2>
@@ -390,14 +436,20 @@
             </div>
 
             <div class="skill-row">
-              <strong>Backend & Data:</strong>
-              PostgreSQL · Prisma ORM · REST APIs · Authentication (OAuth,
-              Sessions) · Zod
+              <strong>Backend & Databases:</strong>
+              Node.js · Express · PostgreSQL · MongoDB · Prisma · Mongoose ·
+              REST APIs · JWT · Zod · Multer
+            </div>
+
+            <div class="skill-row">
+              <strong>AI & Integrations:</strong>
+              OpenRouter · Replicate · Google Gemini AI · Axios · PDF Parsing
             </div>
 
             <div class="skill-row">
               <strong>Infrastructure & Services:</strong>
-              Vercel · Cloudinary · Postmark · Resend · Arcjet
+              Vercel · Cloudinary · Clerk · Better Auth · Postmark · Resend ·
+              Arcjet · Sentry
             </div>
 
             <div class="skill-row">
@@ -408,28 +460,41 @@
         </section>
 
         <section class="section">
-          <h2>Education</h2>
-
-          <div class="education-item">
-            <div class="education-title">
-              Bachelor of Computer Applications (BCA)
+          <h2>Timeline</h2>
+          <div class="timeline-compact">
+            <div class="timeline-compact-item">
+              <div class="timeline-year">2026 – 2027</div>
+              <div class="timeline-content">
+                <div class="timeline-content-title">
+                  MCA, Manipal University Jaipur
+                </div>
+                <div class="timeline-content-sub">
+                  System Design & AI Applications
+                </div>
+              </div>
             </div>
-            <div class="education-date">2021 – 2025</div>
-            <div>Asian School of Business</div>
-            <div>CGPA: <span class="highlight">7.8 / 10</span></div>
-          </div>
-        </section>
 
-        <section class="section">
-          <h2>Engineering Approach</h2>
-          <div class="approach-item">
-            Server-first design for security and correctness
-          </div>
-          <div class="approach-item">
-            Type safety across frontend, backend, and database
-          </div>
-          <div class="approach-item">
-            Workflow-based modeling over UI-first implementations
+            <div class="timeline-compact-item">
+              <div class="timeline-year">2025 – Present</div>
+              <div class="timeline-content">
+                <div class="timeline-content-title">
+                  Independent Full-Stack & AI Developer
+                </div>
+                <div class="timeline-content-sub">
+                  Building AI-powered production systems
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-compact-item">
+              <div class="timeline-year">2021 – 2025</div>
+              <div class="timeline-content">
+                <div class="timeline-content-title">
+                  BCA, Asian School of Business
+                </div>
+                <div class="timeline-content-sub">CGPA: 7.8/10</div>
+              </div>
+            </div>
           </div>
         </section>
       </aside>

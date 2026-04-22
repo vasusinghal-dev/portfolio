@@ -7,8 +7,23 @@ import {
   SiPrisma,
   SiZod,
   SiCloudinary,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiAxios,
+  SiJsonwebtokens,
 } from "react-icons/si";
-import { Cloud, Cpu, Layers, Palette, Server } from "lucide-react";
+
+import {
+  Cloud,
+  Cpu,
+  Layers,
+  Palette,
+  Server,
+  Brain,
+  Upload,
+} from "lucide-react";
+
 import {
   BetterAuth,
   GSAP,
@@ -16,17 +31,21 @@ import {
   Resend,
 } from "../components/Icons/MyBrandIcons";
 
+// ✅ Category Icons
 export const categoryIcons: Record<string, React.ReactNode> = {
   Core: <Layers className="text-primary" size={25} />,
   Frontend: <Palette className="text-primary" size={25} />,
   Backend: <Server className="text-primary" size={25} />,
+  "AI & Integrations": <Brain className="text-primary" size={25} />,
   "Infrastructure & Services": <Cloud className="text-primary" size={25} />,
 };
 
+// ✅ Icon Map
 export const iconMap: Record<
   string,
   { icon: React.ReactNode; hoverColor: string }
 > = {
+  // Core
   "Next.js": {
     icon: <SiNextdotjs size={24} />,
     hoverColor:
@@ -43,6 +62,7 @@ export const iconMap: Record<
       "group-hover:text-[#3178C6] group-hover:drop-shadow-[0_0_20px_rgba(49,120,198,0.8)] group-hover:shadow-[0_0_30px_rgba(49,120,198,0.3)]",
   },
 
+  // Frontend
   "Tailwind CSS": {
     icon: <SiTailwindcss size={24} />,
     hoverColor:
@@ -54,6 +74,22 @@ export const iconMap: Record<
       "group-hover:text-[#88CE02] group-hover:drop-shadow-[0_0_20px_rgba(136,206,2,0.9)] group-hover:shadow-[0_0_30px_rgba(136,206,2,0.3)]",
   },
 
+  // Backend
+  "Node.js": {
+    icon: <SiNodedotjs size={24} />,
+    hoverColor:
+      "group-hover:text-[#3C873A] group-hover:drop-shadow-[0_0_20px_rgba(60,135,58,0.8)] group-hover:shadow-[0_0_30px_rgba(60,135,58,0.3)]",
+  },
+  Express: {
+    icon: <SiExpress size={24} />,
+    hoverColor:
+      "group-hover:text-white group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] group-hover:shadow-[0_0_30px_rgba(0,0,0,0.8)]",
+  },
+  MongoDB: {
+    icon: <SiMongodb size={24} />,
+    hoverColor:
+      "group-hover:text-[#47A248] group-hover:drop-shadow-[0_0_20px_rgba(71,162,72,0.8)] group-hover:shadow-[0_0_30px_rgba(71,162,72,0.3)]",
+  },
   PostgreSQL: {
     icon: <SiPostgresql size={24} />,
     hoverColor:
@@ -64,21 +100,55 @@ export const iconMap: Record<
     hoverColor:
       "group-hover:text-white group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.9)] group-hover:shadow-[0_0_30px_rgba(0,0,0,0.8)]",
   },
-  "Better Auth": {
-    icon: <BetterAuth className="w-6 h-6" />,
-    hoverColor:
-      "group-hover:text-[#059669] group-hover:drop-shadow-[0_0_20px_rgba(5,150,105,0.9)] group-hover:shadow-[0_0_30px_rgba(5,150,105,0.3)]",
-  },
   Zod: {
     icon: <SiZod size={24} />,
     hoverColor:
       "group-hover:text-[#3B82F6] group-hover:drop-shadow-[0_0_30px_rgba(59,130,246,0.55)] group-hover:shadow-[0_0_52px_rgba(59,130,246,0.25)]",
   },
+  JWT: {
+    icon: <SiJsonwebtokens size={24} />,
+    hoverColor:
+      "group-hover:text-[#000000] group-hover:drop-shadow-[0_0_20px_rgba(0,0,0,0.8)] group-hover:shadow-[0_0_30px_rgba(0,0,0,0.3)]",
+  },
 
+  Multer: {
+    icon: <Upload size={24} />,
+    hoverColor:
+      "group-hover:text-[#FF6B6B] group-hover:drop-shadow-[0_0_20px_rgba(255,107,107,0.8)] group-hover:shadow-[0_0_30px_rgba(255,107,107,0.3)]",
+  },
+
+  // AI & Integrations
+  OpenRouter: {
+    icon: <Cpu size={24} />,
+    hoverColor:
+      "group-hover:text-[#6366F1] group-hover:drop-shadow-[0_0_20px_rgba(99,102,241,0.8)] group-hover:shadow-[0_0_30px_rgba(99,102,241,0.3)]",
+  },
+  Replicate: {
+    icon: <Cpu size={24} />,
+    hoverColor:
+      "group-hover:text-[#F43F5E] group-hover:drop-shadow-[0_0_20px_rgba(244,63,94,0.8)] group-hover:shadow-[0_0_30px_rgba(244,63,94,0.3)]",
+  },
+  "Google Gemini": {
+    icon: <Cpu size={24} />,
+    hoverColor:
+      "group-hover:text-[#8B5CF6] group-hover:drop-shadow-[0_0_20px_rgba(139,92,246,0.8)] group-hover:shadow-[0_0_30px_rgba(139,92,246,0.3)]",
+  },
+  Axios: {
+    icon: <SiAxios size={24} />,
+    hoverColor:
+      "group-hover:text-[#5A29E4] group-hover:drop-shadow-[0_0_20px_rgba(90,41,228,0.8)] group-hover:shadow-[0_0_30px_rgba(90,41,228,0.3)]",
+  },
+
+  // Infra & Services
   Cloudinary: {
     icon: <SiCloudinary size={24} />,
     hoverColor:
       "group-hover:text-[#2C3E9E] group-hover:drop-shadow-[0_0_26px_rgba(44,62,158,0.55)] group-hover:shadow-[0_0_42px_rgba(44,62,158,0.55)]",
+  },
+  Clerk: {
+    icon: <BetterAuth className="w-6 h-6" />,
+    hoverColor:
+      "group-hover:text-[#6C47FF] group-hover:drop-shadow-[0_0_20px_rgba(108,71,255,0.9)] group-hover:shadow-[0_0_30px_rgba(108,71,255,0.3)]",
   },
   Postmark: {
     icon: <Postmark className="w-6 h-6" />,
@@ -94,5 +164,10 @@ export const iconMap: Record<
     icon: <Resend className="w-6 h-6" />,
     hoverColor:
       "group-hover:text-white group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.85)] group-hover:shadow-[0_0_36px_rgba(255,255,255,0.25)]",
+  },
+  Sentry: {
+    icon: <Cpu size={24} />,
+    hoverColor:
+      "group-hover:text-[#000000] group-hover:drop-shadow-[0_0_20px_rgba(0,0,0,0.8)] group-hover:shadow-[0_0_30px_rgba(0,0,0,0.3)]",
   },
 };
